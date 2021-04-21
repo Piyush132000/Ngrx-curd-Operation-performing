@@ -1,0 +1,24 @@
+<div class="col-xl-12 d-flex justify-content-center">
+  <div class=" col-sm-8 col-xl-6 col-md-7 m-3 card">
+    <div class="card-body">
+      <h1 class="mat-card-title">Update user</h1>
+      <form [formGroup]="formData" (ngSubmit)="updateData()">
+
+        <div class="form-group">
+          <input class="form-control" formControlName="Name" type="text" placeholder="Enter your name">
+        </div>
+
+        <div class="form-group">
+          <input class="form-control" formControlName="Email" type="email" placeholder="Enter your email">
+        </div>
+
+        <div class="form-group">
+          <input class="form-control" formControlName="Mobile" type="number" placeholder="Enter your mobile No">
+        </div>
+        <div>
+          <button type="submit" class="btn btn-success">Update</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

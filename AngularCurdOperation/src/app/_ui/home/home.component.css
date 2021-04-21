@@ -1,0 +1,7 @@
+.div-form {
+  display: flex;
+   flex-direction: column;
+  align-content: center;
+  align-items: center;
+  background-color: aqua;
+}

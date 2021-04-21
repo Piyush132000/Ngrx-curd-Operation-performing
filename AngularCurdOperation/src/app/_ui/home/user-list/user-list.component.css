@@ -1,0 +1,11 @@
+
+
+.cards{
+  background-color: darkgray;
+  text-decoration: none;
+  color: black;
+}
+.cards:hover{
+  background-color: brown;
+  color: white;
+}

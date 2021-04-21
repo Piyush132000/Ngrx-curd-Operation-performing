@@ -1,0 +1,13 @@
+<div class="div-form ">
+  <div class="col-md-8 col-xl-6 col-sm-6 align-self-center">
+    <app-user-add></app-user-add>
+  </div>
+</div>
+<div class="mt-5">
+  <ng-container *ngIf="!editData">
+    <app-user-list></app-user-list>
+  </ng-container>
+  <ng-container *ngIf="editData">
+    <app-user-edit></app-user-edit>
+  </ng-container>
+</div>

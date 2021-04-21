@@ -1,0 +1,16 @@
+<div class="d-flex row col-lg-12 col-md-12 col-sm-9 m-auto justify-content-center ">
+  <div   *ngFor="let user of userData" class="card m-1 cards col-xl-3 col-md-5 col-sm-12 m-3 border">
+    <div class="card-body" >
+      <p class="card-title">id: {{user.id}}</p>
+      <p class="card-text">Name: {{user.name}}</p>
+      <p class="card-text">Email: {{user.email}}</p>
+      <p class="card-text">MobileNo.: {{user.mobileNo}}</p>
+      <div class="float-right">
+        <button class="btn btn-success" type="button" (click)="editData(user)">Edit</button> |
+        <button class="btn btn-danger" type="button" (click)="deleteData(user.id)">Delete</button>
+      </div>
+
+    </div>
+
+  </div>
+</div>
