@@ -20,7 +20,7 @@ export class UserListComponent implements OnInit {
   ngOnInit(): void {
     this.store.dispatch(new CurdAction.Read())
     this.store.select('app').subscribe(state => {
-      this.userData = state.user
+      this.userData = state.user;
     })
   }
 

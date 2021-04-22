@@ -11,6 +11,9 @@ import {UserListComponent} from './_ui/home/user-list/user-list.component';
 import {UserAddComponent} from './_ui/home/user-add/user-add.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {UserReducer} from "./_store/reducers/user.reducer";
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
+import {AppReducer} from "./_store/reducers/App.reducer";
 
 @NgModule({
   declarations: [
@@ -24,9 +27,10 @@ import {UserReducer} from "./_store/reducers/user.reducer";
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    StoreModule.forRoot({'app': UserReducer}),
+    StoreModule.forRoot(AppReducer),
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
 
 
   ],

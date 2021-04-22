@@ -7,15 +7,15 @@ export interface State {
 
 }
 
-const initialState: State = {
+const initialState = {
   user: UserData,
 }
 
-export function UserReducer(state = initialState, action: fromCurdAction.CurdAction){
+export function UserReducer(state = initialState, action: fromCurdAction.CurdAction): State{
 
   switch (action.type) {
     case fromCurdAction.READ: {
-      console.log( state)
+      console.log( state);
       return {...state };
     }
 
@@ -25,11 +25,13 @@ export function UserReducer(state = initialState, action: fromCurdAction.CurdAct
     }
 
     case fromCurdAction.DELETE: {
-      const userList = state.user.filter(user => user.id != action.payload);
+      console.log(state);
+      const userList = [...state.user].filter(user => user.id != action.payload);
       return {...state, user: userList}
     }
 
     case fromCurdAction.UPDATE: {
+
       let userUpdatedList = state.user.slice();
       for ( var i in userUpdatedList)
       {

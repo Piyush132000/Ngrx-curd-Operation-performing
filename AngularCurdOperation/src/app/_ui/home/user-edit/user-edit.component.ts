@@ -30,7 +30,7 @@ export class UserEditComponent implements OnInit {
   }
 
   updateData(): void{
-    this.store.dispatch(new CurdAction.Read());
+    //this.store.dispatch(new CurdAction.Read());
     console.log(this.formData);
     const Name = this.formData.controls.Name.value;
     const Email = this.formData.controls.Email.value;
